@@ -1,22 +1,31 @@
-String msg;
 ArrayList<String> log;
 
+String msg;
+
 void setup(){
-log = new ArrayList<String>();
+  size(600, 400);
   
-msg = "";
-  size(600,400);
+  log = new ArrayList<String>();
+  
+  msg = "";
 }
-
 void draw(){
-
-  text(msg,100,100);
+  background(0);
   
   textSize(32);
-}
-
-void keyPressed(){
-
-  msg += key;
+  text(msg, 100,100);
   
+  for(int i = 0;i<log.size()-1;i++){
+  
+    text(log.get(i), 100, 100+50*i);
+  
+  }
+}
+void keyPressed(){
+  if (key == ENTER){
+    log.add(msg);
+    msg = "";
+  } else {
+    msg += key;
+  }
 }
