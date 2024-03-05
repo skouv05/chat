@@ -15,11 +15,11 @@ void draw(){
   textSize(32);
   text(msg, 100,100);
   
-  for(int i = log.size();i>0;i--){
+    for(int i = 0;i<log.size();i++){
   
-    text(log.get(i-1), 100, 150+50*(i-1));
+    text(log.get(i), 100, 150+50*i);
   
-  } 
+  }
 }
 void keyPressed(){
   if (key == ENTER){
