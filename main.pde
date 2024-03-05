@@ -1,7 +1,7 @@
 ArrayList<String> log;
 
 String msg;
-
+// jakob har autisme
 void setup(){
   size(600, 400);
   
